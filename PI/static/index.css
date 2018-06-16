@@ -1,0 +1,87 @@
+h1{
+  color: red;
+
+}
+body{
+  background-image: url("/static/lagosta.jpg");
+  width: auto;
+  height: auto;
+  background-size: auto;
+}
+.navbar-inverse{
+  background: rgb(153, 0, 0) !important;
+  border: none;
+  padding: 10px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+#titulo{
+  font-size: 20px;
+}
+.navbar{
+  color: red;
+}
+
+.site{
+  background-color: rgb(120, 0, 0) !important;
+}
+.header {
+  padding: 10px 16px;
+  /* background: #441901; */
+  background: rgb(153, 0, 0);
+  color: #f1f1f1;
+  text-align: center;
+  margin-top: auto;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+#tst{
+  letter-spacing: 10px;
+  font-size: 24pt;;
+}
+
+.container{
+  padding: 20px;
+  /* opacity: 0.7; */
+  letter-spacing: 30px;
+  text-align: center;
+  margin-top: 10%;
+  background-color: rgb(153, 0, 0);
+  border-radius: 20px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.bot{
+  font-family: 'Gloria Hallelujah', cursive;
+  letter-spacing: normal;
+  font-size: 20px;
+}
+
+#none{
+  letter-spacing: normal;
+  padding: 20px;
+  color: white;
+}
+
+.icons{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.icons:hover{
+  /* opacity: 0.7; 
+  border-style: solid;
+  border-color: red;
+  border-width: 10px;*/
+}
+
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: rgba(68, 25, 1, 0.7);
+color: white;
+text-align: center;
+font-family: 'Gloria Hallelujah', cursive;
+}
+#dark{
+  color: rgb(153, 0, 0) !important;
+}

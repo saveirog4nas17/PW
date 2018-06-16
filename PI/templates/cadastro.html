@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="/static/cadastro.css">
+    <meta charset="utf-8">
+    <title>Registre-se agora!</title>
+  </head>
+  <body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand site" href="/">Qual SeU PedidO?</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class=""><a href="#">Perfil</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/sobre/">Sobre</a></li>
+      <li><a id="titulo" href="#">Comidas Bedidas Lanches #tudo num só lugar</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{session.usuario}} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ><form action="/logout/">
+              <input type="submit" value="Sair">
+          </form></a></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+
+<div class="container form">
+    {% if msg_error %}
+    <pre style="color:red">{{ msg_error}}</pre>
+  {% endif %}
+  <form class="form-horizontal" action="/cadastrar/" method="POST" enctype="multipart/form-data">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Preencha os campos abaixo</legend>
+        <legend class="">Registre-se</legend>
+      </div>
+      <div class="control-group">
+        <label class="control-label"  for="usuario">Nome de Usuário</label>
+        <div class="controls">
+          <input type="text" id="username" name="usuario" placeholder="" class="input-xlarge">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="senha">Senha</label>
+        <div class="controls">
+          <input type="password" id="password" name="senha" placeholder="" class="input-xlarge">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="password_confirm">Confirme a senha:</label>
+        <div class="controls">
+          <input type="password" id="password_confirm" name="confirma_senha" placeholder="" class="input-xlarge">
+
+        </div>
+      </div>
+
+      <div class="control-group">
+          <label class="control-label"  for="frase">Palavra ou frase secreta</label>
+          <div class="controls">
+            <input type="text" id="frase" name="frase" placeholder="" class="input-xlarge">
+          </div>
+        </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="cidade">Cidade</label>
+        <div class="controls">
+          <input type="text" id="cidade" name="cidade" placeholder="" class="input-xlarge">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="bairro">Bairro</label>
+        <div class="controls">
+          <input type="text" id="bairro" name="bairro" placeholder="" class="input-xlarge">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="rua">Rua</label>
+        <div class="controls">
+          <input type="text" id="rua" name="rua" placeholder="" class="input-xlarge">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="numero">Numero</label>
+        <div class="controls">
+          <input type="number" id="numero" name="numero" placeholder="" class="input-xlarge">
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label">Foto de perfil:</label>
+        <div class="controls">
+            <input name="foto_url" type="file" />
+
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-success">Registrar</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+</div>
+</div>
+</div>
+
+
+  </body>
+
+</html>

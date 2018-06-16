@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="/static/inserir.css">
+    <meta charset="utf-8">
+    <title>Registre-se agora!</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand site" href="/">Qual SeU PedidO?</a>
+            </div>
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="/perfil/">Perfil</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/sobre/">Sobre</a></li>
+                    <li><a id="titulo" href="#">Comidas Bedidas Lanches #tudo num só lugar</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{session.usuario}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a ><form action="/logout/">
+                          <input type="submit" value="Sair">
+                          </form></a></li>
+                        </ul>
+                      </li>
+                </ul>
+        </div>
+    </nav>
+
+
+<div class="container form">
+    {% if msg_error %}
+        <pre style="color:red">{{ msg_error}}</pre>
+    {% endif %}
+  <form class="form-horizontal" action="/adicionar/" method="POST">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Preencha os campos abaixo</legend>
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label"  for="empresa">Escolha a empresa:</label>
+        <div class="controls">
+          <select name="empresa"> 
+            <option disabled selected value="selectd">----selecione----</option>
+              {% for e in empresas %}
+              <option value="{{e.id}}">{{e.nome}}</option>
+              {% endfor %}
+          </select>
+
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="categoria">Insira a nova categoria:</label>
+        <div class="controls">
+          <input type="text" id="categoria" name="categoria" placeholder="" class="input-xlarge">
+
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <label class="control-label"  for="item">Insira o novo item:</label>
+        <div class="controls">
+          <input type="text" id="item" name="item" placeholder="" class="input-xlarge">
+
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"  for="valor">Insira o valor do itemm:</label>
+        <div class="controls">
+          <input type="number" id="valor" name="valor" placeholder="" class="input-xlarge">
+
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button type="submit" class="btn btn-success">Inserir</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+</div>
+</div>
+
+
+  </body>
+
+</html>
