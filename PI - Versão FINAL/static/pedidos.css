@@ -1,0 +1,58 @@
+.header {
+    padding: 10px 16px;
+    /* background: #441901; */
+    background: rgb(153, 0, 0);
+    color: #f1f1f1;
+    text-align: center;
+    margin-top: auto;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  
+  #tst{
+    letter-spacing: 10px;
+    font-size: 24pt;;
+  }
+  body{
+    background-image: url("/static/pipino.jpg");
+    width: auto;
+    height: auto;
+    background-size: auto;
+  }
+  .navbar-inverse{
+    background: rgb(153, 0, 0);
+    border: none;
+    padding: 10px;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+
+.site{
+    background-color: rgb(120, 0, 0) !important;
+  }
+
+  #titulo{
+    font-size: 20px;
+  }
+  .row{
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 5%;
+  }
+  
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      background-color: white;
+  }
+  
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }
+  

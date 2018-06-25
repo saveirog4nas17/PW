@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="/static/sobre.css">
+    <title>Sobre a empresa</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand site" href="/">Qual SeU PedidO?</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/perfil/">Perfil</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/sobre/">Sobre</a></li>
+          <li><a id="titulo" href="#">Comidas Bedidas Lanches #tudo num só lugar</a></li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{session.usuario}} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a ><form action="/logout/">
+                  <input type="submit" value="Sair">
+              </form></a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <legend><h3>Mais uma vez seja bem-vindo a nossa empresa</h3></legend>
+      <!-- <p>-------------------------------------------------------------------------------------</p> -->
+      <h4>Objetivos:</h4>
+      <p>Garantir a qualidade de serviço com rapidez</p>
+      <p>Suporte máximo ao cliente, seja consumidor final, ou a empresa</p>
+      <p>Sempre buscar evoluir, para podermos melhorar em todos os pontos</p>
+      <p>Deixar nos clientes muuuito satisfeitos :)</p>
+
+      <ul>
+        <li>Contato: (28) 9 9922-9754</li>
+        <li>E-mail: bielvni03@gmail.com</li>
+      </ul>
+      <h1>OBRIGADO! <br>
+      Atenciosamente <br>
+            toda a equipe!!
+      </h1>
+    </div>
+
+
+  </body>
+</html>

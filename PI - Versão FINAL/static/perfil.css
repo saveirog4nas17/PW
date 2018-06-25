@@ -1,0 +1,49 @@
+.header {
+    padding: 10px 16px;
+    /* background: #441901; */
+    background: rgb(153, 0, 0);
+    color: #f1f1f1;
+    text-align: center;
+    margin-top: auto;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  
+.site{
+    background-color: rgb(120, 0, 0) !important;
+  }
+
+  #tst{
+    letter-spacing: 10px;
+    font-size: 24pt;;
+  }
+  
+  body{
+    background-image: url("/static/Sucos.jpg");
+    width: auto;
+    height: auto;
+    background-size: auto;
+  }
+  .navbar-inverse{
+    background: rgb(153, 0, 0);
+    border: none;
+    padding: 10px;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  #titulo{
+    font-size: 20px;
+  }
+  
+  .center{
+    margin: auto;
+    width: 17.2%;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: white;
+  }
+  
+  button{
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-bottom: 40px;
+  }
+  

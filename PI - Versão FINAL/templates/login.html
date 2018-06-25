@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="/static/login.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand site" href="/">Qual SeU PedidO?</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/perfil">Perfil</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/sobre/">Sobre</a></li>
+          <li><a id="titulo" href="#">Comidas Bedidas Lanches #tudo num só lugar</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container login">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    {% with messages = get_flashed_messages() %}
+                      {% for message in messages %}
+                        <h1>{{ message }}</h1>
+                      {% endfor %}
+                  {% endwith %}
+                    <form action="/logar/" method="post">
+                        <div class="form-group">
+                          <label for="nome">Para realizar o login, preencha os campos abaixo:</label>
+                          <input type="text" class="form-control" placeholder="Usuario" name="usuario">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Senha" name="senha">
+                        </div>
+                        <button type="submit" class="btn btn-default">Logar</button>
+                      </form>
+                      
+            </div>
+            <a id="recuperar" class="btn btn-default" href="/recuperarsenha/">Recuperar a senha</a>
+        </div>
+    </div>
+<!-- <div class="error-page">
+  <div class="try-again">Error: Try again?</div>
+</div> -->
+
+
+
+    <footer class="footer">
+
+        <div class="container">
+          <h2>Encontre-nos nas Redes Socias</h2>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-twitter"></a>
+        </div>
+
+
+    </footer>
+
+  </body>
+</html>
